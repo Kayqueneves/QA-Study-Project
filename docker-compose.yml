@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: ecommerce-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?defina MYSQL_ROOT_PASSWORD no arquivo .env}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-ecommerce}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./backend/EcommerceApi
+      dockerfile: Dockerfile
+    container_name: ecommerce-api
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: "server=mysql;port=3306;database=${MYSQL_DATABASE:-ecommerce};user=root;password=${MYSQL_ROOT_PASSWORD}"
+      Jwt__Key: ${JWT_KEY:?defina JWT_KEY no arquivo .env}
+      Jwt__Issuer: ${JWT_ISSUER:-EcommerceApi}
+      Jwt__Audience: ${JWT_AUDIENCE:-EcommerceApiUsers}
+    ports:
+      - "8080:8080"
+
+volumes:
+  mysql_data:
