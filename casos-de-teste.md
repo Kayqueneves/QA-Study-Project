@@ -1,9 +1,9 @@
-# 📋 Relatório de Casos de Teste (QA)
+#  Casos de Teste 
 
 Este documento contém a especificação e o resultado da execução dos casos de teste para os módulos de **Cadastro, Login, Carrinho e Checkout**.
 
 
-## Módulo: Checkout
+## Checkout
 
 ### CH-001 — Finalizar compra com todos os dados válidos
 * **Pré-condição:** Usuário logado e com pelo menos um produto no carrinho.
@@ -62,7 +62,7 @@ Este documento contém a especificação e o resultado da execução dos casos d
 
 ---
 
-## 👤 Módulo: Cadastro
+## Cadastro
 
 ### Casos Positivos (Cadastro)
 
@@ -93,7 +93,7 @@ Este documento contém a especificação e o resultado da execução dos casos d
 
 ### Detalhamento dos Casos de Cadastro (CT)
 
-> 💡 *Nota: Para reduzir a repetição visual, os casos que compartilham a mesma estrutura simplificada estão descritos abaixo passo a passo.*
+> 
 
 <details>
 <summary><b>Clique para expandir o detalhamento dos passos (CT-001 a CT-015)</b></summary>
@@ -119,7 +119,7 @@ Este documento contém a especificação e o resultado da execução dos casos d
 
 ---
 
-## 🛒 Módulo: Carrinho de Compras (CR)
+## Carrinho de Compras (CR)
 
 ### Casos de Teste Positivos
 
@@ -178,7 +178,7 @@ Este documento contém a especificação e o resultado da execução dos casos d
 
 ---
 
-## 🔑 Módulo: Login (LG)
+## Login (LG)
 
 ### Casos de Teste Positivos
 
