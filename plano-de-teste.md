@@ -10,6 +10,57 @@ A documentação do projeto está organizada da seguinte forma:
 - **Testes de API:** disponíveis na pasta `postman/`.
 - **Automação de Testes:** implementada com **Playwright** e localizada na pasta `automation/`.
 - **Evidências:** capturas de tela e demais arquivos estão disponíveis nos bugs na interface do jira.
+- **Para executar a aplicação**: Iniciar a API e o banco de dados
+
+1.Na raiz do projeto, execute:
+
+docker compose up -d
+
+Esse comando iniciará:
+
+API (.NET)
+Banco de dados MySQL
+
+Para verificar se os containers estão em execução:
+
+docker ps
+2. Executar o Front-end
+
+Acesse a pasta do front-end:
+
+cd frontend
+
+Instale as dependências:
+
+npm install
+
+Inicie a aplicação:
+
+npm run dev
+
+A aplicação ficará disponível em:
+
+http://localhost:5173
+3. Executar os testes automatizados
+
+Acesse a pasta onde estão os testes:
+
+cd playwright
+
+Instale as dependências:
+
+npm install
+
+Execute todos os testes:
+
+npx playwright test
+4. Abrir o relatório dos testes
+
+Após a execução:
+
+npx playwright show-report
+
+O relatório HTML será aberto automaticamente no navegador.
 ## 1. Identificação do projeto
 
 **Nome do projeto:** E-commerce QA Study
