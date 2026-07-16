@@ -17,7 +17,7 @@ A documentação do projeto está organizada da seguinte forma:
 **Front-end:** React
 **Back-end:** ASP.NET Core / .NET
 **Banco de dados:** MySQL
-**Responsável pelos testes:** Kayque Brito
+**Responsável pelos testes:** Kayque
 **Versão do documento:** 1.0
 **Data:** 14/07/2026
 
