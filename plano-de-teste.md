@@ -12,7 +12,7 @@ A documentação do projeto está organizada da seguinte forma:
 - **Evidências:** capturas de tela e demais arquivos estão disponíveis nos bugs na interface do jira.
 - **Para executar a aplicação**: Iniciar a API e o banco de dados
 
-1.Na raiz do projeto, execute:
+-1.Na raiz do projeto, execute:
 
 docker compose up -d
 
@@ -24,7 +24,8 @@ Banco de dados MySQL
 Para verificar se os containers estão em execução:
 
 docker ps
-2. Executar o Front-end
+
+- 2. Executar o Front-end
 
 Acesse a pasta do front-end:
 
@@ -41,7 +42,7 @@ npm run dev
 A aplicação ficará disponível em:
 
 http://localhost:5173
-3. Executar os testes automatizados
+- 3. Executar os testes automatizados
 
 Acesse a pasta onde estão os testes:
 
